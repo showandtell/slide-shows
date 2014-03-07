@@ -1,4 +1,4 @@
-### This fork of reveal.js have been modified for use with Show & Tell
+### This fork of reveal.js has been modified for use with Show & Tell. So far I've only added Handlebars, but there could be more changes to come.
 
 # reveal.js
 
