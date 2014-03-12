@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+		img {
+		    max-height: 80%;
+		}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div id="slides" class="slides">
+			</div>
+
+		</div>
+	
+<script id="slide-template" type="text/x-handlebars-template">
+ {{#each cards}}
+	<section>
+	    <div>{{{formattedText}}}</div>
+      {{#if image}}{{#if image.path}}
+        <div><img src="{{image.path}}" alt="{{image.name}}"></img></div>
+      {{/if}}{{/if}}
+        
+      {{#if audio}}{{#if audio.path}}
+        <div><audio controls="" name="media">
+            <source src="{{audio.path}}" type="audio/webm; codecs=vorbis">
+        </audio></div>
+      {{/if}}{{/if}}
+	</section>
+	{{/each}}
+	<section>
+    <p>Created with <a href="http://showandtell.github.io">Show &amp; Tell</a></p>
+    <p>Presentation framework: <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></p>
+  </section>
+</script>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.min.js"></script>
+		
+		<script src="../reveal.js/lib/js/handlebars.js"></script>
+    <script src="deck.js"></script>
+    <script src="../reveal.js/init.js"></script>
+
+	</body>
+</html>
